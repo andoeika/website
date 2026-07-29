@@ -1,105 +1,161 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Installation | Eika Ando</title>
-
+  <title>Installation 01 | Eika Ando</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      background: #ffffff;
-      color: #222222;
+      background: #fff;
+      color: #202020;
       font-family: Arial, Helvetica, sans-serif;
     }
-
     header {
-      padding: 40px 5vw;
+      padding: 34px 4vw;
     }
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 60px 5vw;
-}
-
-.gallery img {
-    width: 100%;
-    display: block;
-}
     header a {
-      color: #222222;
+      color: inherit;
       text-decoration: none;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
-    }
-
-    main {
-      width: min(100% - 48px, 900px);
-      margin: 100px auto 140px;
-    }
-
-    h1 {
-      margin-bottom: 100px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(40px, 6vw, 68px);
-      font-weight: 400;
-    }
-
-    .installation-entry {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .number {
-      margin-bottom: 46px;
-      font-size: 22px;
-      letter-spacing: 0.08em;
-    }
-
-    .installation-entry img {
-      display: block;
-      width: min(72vw, 620px);
-      max-height: 72vh;
-      object-fit: contain;
-    }
-
-    .more-link {
-      margin-top: 42px;
-      color: #222222;
-      text-decoration: none;
       font-size: 16px;
-      letter-spacing: 0.03em;
     }
-
-    @media (max-width: 700px) {
-      header {
-        padding: 28px 7vw;
+    main {
+      width: 100%;
+      overflow: hidden;
+    }
+    .intro {
+      width: min(92vw, 1320px);
+      margin: 11vh auto 20vh;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 40px;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(46px, 7vw, 104px);
+      font-weight: 400;
+      line-height: .95;
+      letter-spacing: -.035em;
+    }
+    .meta {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .sequence {
+      width: min(92vw, 1440px);
+      margin: 0 auto;
+      padding-bottom: 18vh;
+    }
+    figure {
+      margin-bottom: clamp(90px, 14vw, 220px);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .wide {
+      width: 100%;
+    }
+    .large {
+      width: min(84vw, 1120px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .medium-left {
+      width: min(64vw, 820px);
+      margin-right: auto;
+    }
+    .medium-right {
+      width: min(64vw, 820px);
+      margin-left: auto;
+    }
+    .small-center {
+      width: min(42vw, 520px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(20px, 5vw, 90px);
+      align-items: center;
+      margin-bottom: clamp(90px, 14vw, 220px);
+    }
+    .pair figure {
+      margin: 0;
+    }
+    .pair.offset {
+      grid-template-columns: .78fr 1.22fr;
+      align-items: end;
+    }
+    .pair.reverse {
+      grid-template-columns: 1.2fr .8fr;
+      align-items: start;
+    }
+    .closing {
+      width: min(92vw, 1320px);
+      margin: 4vh auto 10vh;
+      padding-top: 8vh;
+      border-top: 1px solid #dedede;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    @media (max-width: 720px) {
+      header { padding: 24px 6vw; }
+      .intro {
+        width: 88vw;
+        margin: 8vh auto 15vh;
+        display: block;
       }
-
-      main {
-        width: min(100% - 36px, 900px);
-        margin-top: 80px;
-      }
-
       h1 {
-        margin-bottom: 80px;
+        font-size: clamp(44px, 15vw, 70px);
       }
-
-      .installation-entry img {
-        width: 84vw;
+      .meta {
+        text-align: left;
+        margin-top: 28px;
+      }
+      .sequence {
+        width: 88vw;
+      }
+      figure {
+        margin-bottom: clamp(70px, 24vw, 130px);
+      }
+      .large,
+      .medium-left,
+      .medium-right,
+      .small-center {
+        width: 100%;
+      }
+      .pair,
+      .pair.offset,
+      .pair.reverse {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .pair {
+        margin-bottom: clamp(70px, 24vw, 130px);
+      }
+      .closing {
+        width: 88vw;
+        display: block;
+      }
+      .closing p + p {
+        margin-top: 18px;
       }
     }
   </style>
 </head>
-
 <body>
 
   <header>
@@ -107,57 +163,59 @@
   </header>
 
   <main>
-<section class="installation-page">
+    <section class="intro">
+      <h1>Installation 01</h1>
+      <p class="meta">2024<br>Yame, Fukuoka, Japan</p>
+    </section>
 
-  <div class="installation-header">
-    <h1>Installation 01</h1>
-    <p>2024<br>Yame, Fukuoka, Japan</p>
-  </div>
+    <section class="sequence">
+      <figure class="large">
+        <img src="AmazonPhotos/installation01-1.jpeg" alt="Installation 01">
+      </figure>
 
-  <div class="gallery">
+      <figure class="wide">
+        <img src="AmazonPhotos/installation01-4.jpeg" alt="Installation 01">
+      </figure>
 
-<img src="images/installation01/AmazonPhotos/installation01-1.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-2.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-3.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-4.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-5.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-6.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-7.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-8.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-9.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-10.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-11.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-12.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-13.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-14.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-15.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-16.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-17.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-18.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-19.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-20.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-21.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-22.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-23.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-24.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-25.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-26.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-27.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-28.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-29.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-30.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-31.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-32.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-33.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-34.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-35.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-36.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-37.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-38.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-39.jpeg" alt="">
-  </div>
+      <div class="pair offset">
+        <figure>
+          <img src="AmazonPhotos/installation01-10.jpeg" alt="Installation 01">
+        </figure>
+        <figure>
+          <img src="AmazonPhotos/installation01-20.jpeg" alt="Installation 01">
+        </figure>
+      </div>
 
-</section>
+      <figure class="medium-right">
+        <img src="AmazonPhotos/installation01-22.jpg" alt="Installation 01">
+      </figure>
+
+      <figure class="wide">
+        <img src="AmazonPhotos/installation01-25.jpeg" alt="Installation 01">
+      </figure>
+
+      <div class="pair reverse">
+        <figure>
+          <img src="AmazonPhotos/installation01-35.jpeg" alt="Installation 01">
+        </figure>
+        <figure>
+          <img src="AmazonPhotos/installation01-36.jpeg" alt="Installation 01">
+        </figure>
+      </div>
+
+      <figure class="medium-left">
+        <img src="AmazonPhotos/installation01-37.jpeg" alt="Installation 01">
+      </figure>
+
+      <figure class="small-center">
+        <img src="AmazonPhotos/installation01-38.jpeg" alt="Installation 01">
+      </figure>
+    </section>
+
+    <footer class="closing">
+      <p>Installation 01</p>
+      <p>2024<br>Former Yame County Office<br>Fukuoka, Japan</p>
+    </footer>
   </main>
 
 </body>
