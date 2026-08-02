@@ -2,7 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Installation | Eika Ando</title>
 
@@ -20,21 +23,9 @@
     }
 
     header {
-      padding: 30px 4vw 20px;
-      font-size:12px;
-      opacity:0.6;
+      padding: 40px 5vw;
     }
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 60px 5vw;
-}
 
-.gallery img {
-    width: 100%;
-    display: block;
-}
     header a {
       color: #222222;
       text-decoration: none;
@@ -43,43 +34,62 @@
     }
 
     main {
-      width: min(100% - 48px, 900px);
-      margin: 100px auto 140px;
+      width: min(90vw, 1200px);
+      margin: 80px auto 160px;
     }
 
-h1 {
-    margin-bottom: 120px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(34px, 5vw, 56px);
-    font-weight: 300;
-    letter-spacing: 0.08em;
-    line-height: 1.15;
-}
+    h1 {
+      margin-bottom: 120px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+    }
 
-.installation-entry {
+    .installation-list {
+      display: flex;
+      flex-direction: column;
+      gap: 180px;
+    }
+
+    .installation-entry {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .number {
-      margin-bottom: 46px;
-      font-size: 22px;
-      letter-spacing: 0.08em;
-    }
-
-.installation-entry img {
-    display: block;
-    width: min(92vw, 1200px);
-    max-height: 88vh;
-    object-fit: contain;
-}
-    .more-link {
-      margin-top: 42px;
+    .installation-entry a {
       color: #222222;
       text-decoration: none;
-      font-size: 16px;
-      letter-spacing: 0.03em;
+    }
+
+    .installation-entry img {
+      display: block;
+      width: min(82vw, 1000px);
+      max-height: 82vh;
+      object-fit: contain;
+    }
+
+    .installation-info {
+      width: min(82vw, 1000px);
+      margin-top: 36px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .number {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+    }
+
+    .place {
+      font-size: 14px;
+      line-height: 1.45;
+      text-align: right;
     }
 
     @media (max-width: 700px) {
@@ -88,92 +98,36 @@ h1 {
       }
 
       main {
-        width: min(100% - 36px, 900px);
-        margin-top: 80px;
+        width: 86vw;
+        margin-top: 70px;
       }
 
       h1 {
-        margin-bottom: 80px;
+        margin-bottom: 90px;
+      }
+
+      .installation-list {
+        gap: 120px;
       }
 
       .installation-entry img {
-        width: 84vw;
+        width: 86vw;
+      }
+
+      .installation-info {
+        width: 86vw;
+        margin-top: 24px;
+      }
+
+      .number {
+        font-size: 21px;
+      }
+
+      .place {
+        font-size: 12px;
       }
     }
-
-/* ===== Version 2 ===== */
-.installation-header{
-  padding-bottom:0px !important;
-margin-left:-120px;
-}
-
-.installation-header p{
-    margin-left:-70px;
-}
-
-.installation-header h1{
-  margin-left:-70px;
-margin-bottom:50px;
-    font-size: clamp(24px,3.2vw,38px);
-    font-weight: 200;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-    .gallery{ 
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center;
-    gap:0 !important;
-    margin-top:-60px !important;
-}
-
-.gallery img{
-    width:min(72vw,900px) !important;
-    margin-bottom:260px !important;
-}
-
-/* 1枚目 */
-.gallery img:first-child{
-    width:min(92vw,1400px) !important;
-}
-
-.gallery img:nth-child(1){
-  width:94vw !important;
-}
-
-/* 2枚目：小さく */
-.gallery img:nth-child(2){
-  width:min(30vw,340px) !important;
-}
-
-/* 5枚目：静かに */
-.gallery img:nth-child(5){
-    width:min(70vw,800px) !important;
-}
-
-/* 6枚目 */
-.gallery img:nth-child(6){
-    width:min(72vw,900px) !important;
-}
-
-/* 3枚目：中〜大 */
-.gallery img:nth-child(3){
-  width:min(90vw,1400px) !important;
-}
-
-/* 7枚目 */
-.gallery img:nth-child(7){
-    width:min(26vw,300px) !important;
-}
-
-/* 8枚目 */
-.gallery img:nth-child(8){
-    width:min(72vw,950px) !important;
-}
-
   </style>
-
 </head>
 
 <body>
@@ -183,35 +137,49 @@ margin-bottom:50px;
   </header>
 
   <main>
-<section class="installation-page">
 
-  <div class="installation-header">
-    <h1>01</h1>
-    <p>2024<br>Yame, Fukuoka, Japan</p>
-  </div>
+    <h1>Installation</h1>
 
-  <div class="gallery">
+    <div class="installation-list">
 
+      <article class="installation-entry">
+        <a href="installation01.html">
+          <img
+            src="images/installation01/AmazonPhotos/installation01-1.jpeg"
+            alt="Installation 01"
+          >
 
-<img src="images/installation01/AmazonPhotos/installation01-1.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-2.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-4.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-5.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-6.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-8.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-10.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-11.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-14.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-16.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-19.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-23.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-29.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-34.jpeg" alt="">
-<img src="images/installation01/AmazonPhotos/installation01-39.jpeg" alt="">
+          <div class="installation-info">
+            <p class="number">01</p>
 
-  </div>
+            <p class="place">
+              2024<br>
+              Yame, Fukuoka, Japan
+            </p>
+          </div>
+        </a>
+      </article>
 
-</section>
+      <article class="installation-entry">
+        <a href="installation02.html">
+          <img
+            src="images/installation02/installation02-01.jpeg"
+            alt="Installation 02"
+          >
+
+          <div class="installation-info">
+            <p class="number">02</p>
+
+            <p class="place">
+              2025<br>
+              Kumamoto, Japan
+            </p>
+          </div>
+        </a>
+      </article>
+
+    </div>
+
   </main>
 
 </body>
